@@ -31,6 +31,21 @@ describe("Tests for directions in space", () => {
   });
 });
 
+describe("Test for executing commands", () => {
+  test("Test if command is Empty", () => {
+    const commands = ["f", "r", "u", "b", "l"];
+    const preDefCommands = ["f", "r", "u", "b", "l"];
+    let failed = false;
+    for (command of commands) {
+      if (preDefCommands.indexOf(command) == -1) {
+        failed = true;
+        break;
+      }
+    }
+    expect(failed).toBe(false);
+  });
+});
+
 // A test is just a function whose arguments define the test.
 
 // Specifications define what our code should do and are ultimately
