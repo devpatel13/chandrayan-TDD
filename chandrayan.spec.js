@@ -2,7 +2,7 @@ function testNavigateSpacecraft() {
   //
 }
 
-describe("Tests for navigateChandrayan", () => {
+describe("Tests for navigateChandrayan arguments", () => {
   test("Testing initial position", () => {
     const initialPosition = { x: 0, y: 0, z: 0 };
 
@@ -14,6 +14,20 @@ describe("Tests for navigateChandrayan", () => {
     const commands = ["f", "r", "u", "b", "l"];
     const empty = [];
     expect(commands).not.toEqual(empty);
+  });
+});
+
+describe("Tests for directions in space", () => {
+  test("Testing directions", () => {
+    const directions = {
+      N: { l: "W", r: "E", u: "U", d: "D" },
+      E: { l: "N", r: "S", u: "U", d: "D" },
+      W: { l: "S", r: "N", u: "U", d: "D" },
+      S: { l: "E", r: "W", u: "U", d: "D" },
+      U: { l: "W", r: "E", u: "S", d: "N" },
+      D: { l: "W", r: "E", u: "N", d: "S" },
+    };
+    expect(directions["N"]["l"]).toBe("W");
   });
 });
 
