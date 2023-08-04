@@ -3,6 +3,9 @@
 ## Description
 This program helps the Chandrayaan spacecraft navigate through the galaxy using galactic coordinates (x, y, z). The spacecraft receives commands from Earth, and it can move forward/backward, turn left/right, and rotate up/down based on its initial direction.
 
+## Note
+A pdf documentaion of the steps followed during the testing is upploaded on the repo. 
+
 ## Requirements
 - Node.js with Jest for running tests
 
